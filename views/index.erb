@@ -1,0 +1,40 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>
+      Welcome to Caesar's cipher!
+    </h1>
+    <form>
+      <p>
+        Number of spaces in aphabet to rotate:
+      </p>
+      <select name='rotations'>
+        <option value='1'>1</option>
+        <option value='2'>2</option>
+        <option value='3'>3</option>
+        <option value='4'>4</option>
+        <option value='5'>5</option>
+        <option value='6'>6</option>
+        <option value='7'>7</option>
+        <option value='8'>8</option>
+        <option value='9'>9</option>
+        <option value='10'>10</option>
+        <option value='11'>11</option>
+        <option value='12'>12</option>
+        <option value='13'>13</option>
+      </select><br><br>
+      <textarea name='phrase' rows="5" cols="55">
+Input the text you want to have caesar ciphered here!
+      </textarea><br><br>
+  		<input type='submit' value='Submit' />
+	 </form>
+    <p>
+      Your ciphered phrase is:<br><br>
+      <%= phrase %><br><br>
+      To return this phrase to normal:<br>
+      1) rotate 13 spaces<br>
+      2) rotate 13 minus the number of first rotations spaces.
+    </p>
+  </body>
+</html>
