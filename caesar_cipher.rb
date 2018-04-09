@@ -1,7 +1,7 @@
 require 'sinatra'
 
 get '/' do 
-	def caesar_cipher(string, rot=1)
+	def caesar_cipher(string=" ", rot=1)
 		output = string.split("")
 		output.map! do |x|
 			if x.ord.between?("A".ord, "Z".ord)
