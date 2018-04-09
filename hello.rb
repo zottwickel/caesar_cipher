@@ -1,5 +1,4 @@
 require 'sinatra'
-require 'sinatra/reloader'
 
 get '/' do 
 	def caesar_cipher(string, rot=1)
