@@ -1,7 +1,7 @@
 require 'sinatra'
 
 get '/' do 
-	def caesar_cipher(string=" ", rot=1)
+	def caesar_cipher(string, rot=1)
 		output = string.split("")
 		output.map! do |x|
 			if x.ord.between?("A".ord, "Z".ord)
@@ -14,6 +14,6 @@ get '/' do
 		end
 		output.join("")
 	end
-	phrase = caesar_cipher(params["phrase"], params["rotations"].to_i)
+	phrase = caesar_cipher(params["phrase"], params["rotations"].to_i) if params["phrase"] != nil
 	erb :index, :locals => {:phrase => phrase}
 end
